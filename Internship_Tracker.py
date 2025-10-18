@@ -14,7 +14,7 @@ df2 = pd.read_csv('Interview_Notes.csv')
 #Get password
 def get_password():
     print()
-    print("{In54t3rnsh!p%}")
+    print("#PasswordForApplications#")
     print()
     return
 
@@ -236,3 +236,4 @@ def main():
 
 
 main()
+
