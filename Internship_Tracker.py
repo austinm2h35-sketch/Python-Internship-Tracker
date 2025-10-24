@@ -54,6 +54,10 @@ def add_to_file(df, file_code):
 def update_file(df, file_code):
     print()
     company_name = input("Enter company which you want to update: ")
+    matches = df[df["Company"] == company_name]
+    if matches.empty:
+        print("No entry found for ", company_name)
+        return
     if file_code == 1:
         #application
         continue_editing = 'y'
@@ -95,7 +99,7 @@ def print_entry(df):
         print("Matching entries:\n")
         print(matches.to_string(index=False))
     else:
-        print("No entry found for that company.")
+        print("No entry found for ", company_name)
     print()
     return
 
@@ -236,4 +240,5 @@ def main():
 
 
 main()
+
 
